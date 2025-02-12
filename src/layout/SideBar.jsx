@@ -3,7 +3,7 @@ import logo from "../images/layoutImg1.svg"
 import moon from "../images/moon.svg"
 import people from "../images/people.svg"
 
-function MyLayout() {
+function SideBar() {
     return (
         <div className='bg-[#373B53] flex items-center justify-between lg:fixed lg:top-[-0px] lg:bg-[#373B53] lg:w-[73px] lg:rounded-r-[19px] lg:flex-col lg:items-start lg:h-screen lg:flex'>
                 <img src={logo} alt="logo" />
@@ -15,4 +15,4 @@ function MyLayout() {
     )
 }
 
-export default MyLayout
+export default SideBar
