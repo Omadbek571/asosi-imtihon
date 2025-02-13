@@ -222,11 +222,12 @@ function Home() {
   function delItem(id) {
     const upItem = items.filter((item) => item.id !== id)
     setItems(upItem)
-  }  
+  }
+  console.log(filterData);
 
 
   return (
-    <div className="lg:flex lg:justify-center md:ml-2 mt-12">
+    <div className="lg:flex lg:justify-center md:ml-2 mt-2">
       <div className="gap-2 relative flex flex-col items-center w-[100%] lg:whitespace-nowrap lg:w-[45rem] ">
         <div className="flex items-center w-[90%] justify-between lg:w-[95%] md:w-[95%]">
           <div>
@@ -260,7 +261,7 @@ function Home() {
           </div>
         </div>
         {!driwer && (
-          <div className="absolute border-2 p-2 h-[135vh] dark:bg-[#141625] rounded-md bg-white lg:left-[-330px]  lg:h-[800px] md:h-[90vh] left-[-2px] top-[-8px] w-[98%] md:w-[70%] overflow-auto break-words">
+          <div className="absolute border-2 p-2 h-[120vh]   dark:bg-[#141625] rounded-md bg-white lg:left-[-330px]  left-[-2px] top-[-8px] w-[98%] md:w-[70%] overflow-auto ">
             <div className="flex dark:text-white  items-center font-bold gap-3 cursor-pointer" onClick={() => setDriwer(true)}>
               <GoChevronLeft />
               <span className="">Go back</span>
@@ -437,7 +438,7 @@ function Home() {
               />
             </div>
 
-            <form onChange={handleForm} onSubmit={handleSave}>
+            <form onChange={handleForm} onSubmit={handleSave} className="">
               <div>
                 {items.map((item) => (
                   <div key={item.id}>
@@ -456,11 +457,11 @@ function Home() {
                     </div>
                     <div className="flex items-center justify-between w-full gap-4">
                       <div className="flex flex-col gap-2 items-center w-1/4">
-                        <label className="text-gray-400 font-light" htmlFor={`qty-${items[0].qty}`}>
+                        <label className="text-gray-400 font-light" htmlFor={`qty-${item.id}`}>
                           Qty.
                         </label>
                         <input
-                          id={`qty-${item.total}`}
+                          id={`qty-${item.id}`}
                           type="number"
                           className="py-2 dark:text-white w-full px-4 border-2 rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
                         />
