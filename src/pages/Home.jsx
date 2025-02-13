@@ -241,7 +241,10 @@ function Home() {
               className="p-2 bg-[#33d69f0f] text-black font-semibold rounded-md 
                dark:bg-[#1e1e2f] dark:text-white border border-gray-300 dark:border-gray-600"
             >
-              <option value="">Filter by status</option>
+              <option value="">
+                <span className="block md:hidden">Filter</span>
+                {/* <span className="hidden md:block">Filter by status</span> */}
+              </option>
               <option value="Paid">Paid</option>
               <option value="Draft">Draft</option>
               <option value="Pending">Pending</option>
