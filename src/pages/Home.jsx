@@ -226,7 +226,7 @@ function Home() {
 
 
   return (
-    <div className="lg:flex lg:justify-center md:ml-2 mt-2">
+    <div className="lg:flex lg:justify-center md:ml-2 mt-12">
       <div className="gap-2 relative flex flex-col items-center w-[100%] lg:whitespace-nowrap lg:w-[45rem] ">
         <div className="flex items-center w-[90%] justify-between lg:w-[95%] md:w-[95%]">
           <div>
@@ -260,7 +260,7 @@ function Home() {
           </div>
         </div>
         {!driwer && (
-          <div className="absolute border-2 p-2 h-[95vh] dark:bg-[#141625] rounded-md bg-white lg:left-[-330px]  lg:h-[800px] md:h-[90vh] left-[-2px] top-[-8px] w-[98%] md:w-[70%] overflow-auto break-words">
+          <div className="absolute border-2 p-2 h-[135vh] dark:bg-[#141625] rounded-md bg-white lg:left-[-330px]  lg:h-[800px] md:h-[90vh] left-[-2px] top-[-8px] w-[98%] md:w-[70%] overflow-auto break-words">
             <div className="flex dark:text-white  items-center font-bold gap-3 cursor-pointer" onClick={() => setDriwer(true)}>
               <GoChevronLeft />
               <span className="">Go back</span>
