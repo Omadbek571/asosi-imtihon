@@ -531,7 +531,7 @@ function Home() {
                   </h2>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-2">
-                  <h3 className="text-gray-400 whitespace-nowrap ">{value.clientName}</h3>
+                  <h3 className="text-gray-400 whitespace-nowrap ">{value?.clientName}</h3>
                   <div className="flex justify-between items-center gap-2">
                     <div
                       className={`flex items-center w-24  gap-2 px-3 py-2 rounded-md text-sm text-center
