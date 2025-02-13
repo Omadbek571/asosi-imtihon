@@ -7,7 +7,7 @@ import ErroePages from './pages/ErroePages'
 
 function App() {
   return (
-    <div className='lg:flex md:mx-auto   rounded-md'>
+    <div className='lg:flex md:mx-auto dark:bg-[#141625] h-[135vh] md:[130vh] rounded-md'>
       <div className=''>
         <SideBar/>
       </div>

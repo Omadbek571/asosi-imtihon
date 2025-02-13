@@ -54,7 +54,7 @@ function Detailes() {
       setEditData((prev) => ({ ...prev, [field]: value }))
     }
   }
-  
+
 
   function handleItemChange(e, id, field) {
     const { value } = e.target
@@ -85,15 +85,16 @@ function Detailes() {
     setEditOpen(false)
   }
 
+
   return (
-    <div className="border-2 flex flex-col container mx-auto lg:w-[800px]">
+    <div className="shadow-2xl flex flex-col container mx-auto lg:w-[800px] dark:bg-[#1e2139]">
       {editOpen && (
-        <div className="p-2 border-2 absolute left-0 md:left-4 lg:left-20 h-[180vh] w-[45vh] md:w-[60vh] text-black bg-white rounded-md overflow-y-auto">
-          <div className="font-bold flex gap-5 items-center cursor-pointer" onClick={() => setEditOpen(false)}>
+        <div className="p-2 dark:bg-[#141625] border-2 absolute left-0 md:left-4 lg:left-20 h-[180vh] w-[45vh] md:w-[60vh] text-black bg-white rounded-md overflow-y-auto">
+          <div className="font-bold dark:text-white flex gap-5 items-center cursor-pointer" onClick={() => setEditOpen(false)}>
             <GoChevronLeft />
-            Go Back
+            <span className="">Go Back</span>
           </div>
-          <div className="font-bold mt-4 text-xl">
+          <div className="font-bold mt-4 text-xl dark:text-white">
             Edit <span className="text-gray-500">#</span>
             {detalData.id}
           </div>
@@ -110,7 +111,7 @@ function Detailes() {
               type="text"
               value={editData.senderAddress?.street || ""}
               onChange={(e) => handleInputChange(e, "senderAddress", "street")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
           <div className="flex gap-2">
@@ -123,7 +124,7 @@ function Detailes() {
                 type="text"
                 value={editData.senderAddress?.city || ""}
                 onChange={(e) => handleInputChange(e, "senderAddress", "city")}
-                className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+                className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
               />
             </div>
             <div className="flex flex-col gap-2 w-42">
@@ -135,7 +136,7 @@ function Detailes() {
                 type="text"
                 value={editData.senderAddress?.postCode || ""}
                 onChange={(e) => handleInputChange(e, "senderAddress", "postCode")}
-                className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+                className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
               />
             </div>
           </div>
@@ -149,7 +150,7 @@ function Detailes() {
               type="text"
               value={editData.senderAddress?.country || ""}
               onChange={(e) => handleInputChange(e, "senderAddress", "country")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
 
@@ -165,7 +166,7 @@ function Detailes() {
               type="text"
               value={editData.clientName || ""}
               onChange={(e) => handleInputChange(e, "clientName")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
           <div className="flex mt-3 flex-col gap-2 w-full">
@@ -177,7 +178,7 @@ function Detailes() {
               type="text"
               value={editData.clientEmail || ""}
               onChange={(e) => handleInputChange(e, "clientEmail")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
           <div className="flex mt-3 flex-col gap-2 w-full">
@@ -189,7 +190,7 @@ function Detailes() {
               type="text"
               value={editData.clientAddress?.street || ""}
               onChange={(e) => handleInputChange(e, "clientAddress", "street")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
           <div className="flex gap-2 mt-3">
@@ -202,7 +203,7 @@ function Detailes() {
                 type="text"
                 value={editData.clientAddress?.city || ""}
                 onChange={(e) => handleInputChange(e, "clientAddress", "city")}
-                className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+                className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
               />
             </div>
             <div className="flex flex-col gap-2 w-42">
@@ -214,7 +215,7 @@ function Detailes() {
                 type="text"
                 value={editData.clientAddress?.postCode || ""}
                 onChange={(e) => handleInputChange(e, "clientAddress", "postCode")}
-                className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+                className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
               />
             </div>
           </div>
@@ -227,7 +228,7 @@ function Detailes() {
               type="text"
               value={editData.clientAddress?.country || ""}
               onChange={(e) => handleInputChange(e, "clientAddress", "country")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
           <div className="flex mt-3 flex-col gap-2 w-full">
@@ -239,20 +240,23 @@ function Detailes() {
               type="date"
               value={editData.createdAt || ""}
               onChange={(e) => handleInputChange(e, "createdAt")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
           <select
             id="paymentTerms"
             value={Number(editData.paymentTerms) || 1}
             onChange={(e) => handleInputChange(e, "paymentTerms")}
-            className="w-full py-2 mt-3 px-4 border-[.2px] rounded-lg focus:outline-none border-gray-300 focus:outline-purple-400"
+            className="w-full py-2 mt-3 px-4 border rounded-lg focus:outline-none 
+               border-gray-300 focus:ring-2 focus:ring-purple-400 
+               bg-white text-black dark:bg-[#1e1e2f] dark:text-white dark:border-gray-600"
           >
             <option value="1">Next 1 day</option>
             <option value="7">Next 7 days</option>
             <option value="14">Next 14 days</option>
             <option value="30">Next 30 days</option>
           </select>
+
 
           <div className="flex mt-3 flex-col gap-2 w-full">
             <label className="text-gray-500 font-semibold" htmlFor="projectDescription">
@@ -263,7 +267,7 @@ function Detailes() {
               type="text"
               value={editData.projectDescription || ""}
               onChange={(e) => handleInputChange(e, "projectDescription")}
-              className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+              className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
             />
           </div>
           <div>
@@ -280,7 +284,7 @@ function Detailes() {
                       type="text"
                       value={item.name}
                       onChange={(e) => handleItemChange(e, item.id, "name")}
-                      className="py-2 px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+                      className="py-2 dark:text-white px-4 border-[2px] rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -294,7 +298,7 @@ function Detailes() {
                       type="number"
                       value={item.quantity}
                       onChange={(e) => handleItemChange(e, item.id, "quantity")}
-                      className="py-2 w-full px-4 border-2 rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+                      className="py-2 dark:text-white w-full px-4 border-2 rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
                     />
                   </div>
                   <div className="flex flex-col gap-2 items-center w-1/4">
@@ -306,7 +310,7 @@ function Detailes() {
                       type="number"
                       value={item.price}
                       onChange={(e) => handleItemChange(e, item.id, "price")}
-                      className="py-2 w-full px-4 border-2 rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
+                      className="py-2 dark:text-white w-full px-4 border-2 rounded-lg focus:border-purple-500 border-gray-300 focus:outline-none"
                     />
                   </div>
                   <div className="w-1/6 flex justify-center p-2">
@@ -338,7 +342,7 @@ function Detailes() {
         <div className="text-purple-500">
           <GoChevronLeft />
         </div>
-        <h3 className="cursor-pointer">
+        <h3 className="cursor-pointer dark:text-white">
           <b>Go back</b>
         </h3>
       </div>
@@ -348,23 +352,21 @@ function Detailes() {
           <h2 className="text-gray-400">Status</h2>
           <div
             className={`px-3 py-2 rounded-md flex items-center gap-2
-                ${
-                  detalData.status === "paid"
-                    ? "bg-green-100 text-green-500"
-                    : detalData.status === "pending"
-                      ? "bg-yellow-100 text-yellow-500"
-                      : "bg-gray-200 text-black"
-                }`}
+                ${detalData.status === "paid"
+                ? "bg-[#33d69f0f] text-green-500"
+                : detalData.status === "pending"
+                  ? "bg-[#ff8f000f] text-yellow-500"
+                  : "bg-gray-200 text-black"
+              }`}
           >
             <span
               className={`w-3 h-3 rounded-full 
-                  ${
-                    detalData.status === "paid"
-                      ? "bg-green-500"
-                      : detalData.status === "pending"
-                        ? "bg-yellow-500"
-                        : "bg-gray-400"
-                  }`}
+                  ${detalData.status === "paid"
+                  ? "bg-green-500"
+                  : detalData.status === "pending"
+                    ? "bg-yellow-500"
+                    : "bg-gray-400"
+                }`}
             ></span>
             {detalData.status}
           </div>
@@ -394,7 +396,7 @@ function Detailes() {
         <div className="md:justify-between flex flex-col md:flex-row">
           <div>
             <h1 className="text-gray-500 font-bold">
-              #<span className="text-black">{detalData.id}</span>
+              #<span className="text-black dark:text-white">{detalData.id}</span>
             </h1>
             <p className="text-gray-600">{detalData.clientName}</p>
           </div>
@@ -409,16 +411,16 @@ function Detailes() {
           <div className="mt-6 flex flex-col gap-4">
             <div>
               <p className="font-semibold text-gray-500">Inv oice Date</p>
-              <h2 className="font-bold text-xl">{detalData.createdAt}</h2>
+              <h2 className="font-bold text-xl dark:text-white">{detalData.createdAt}</h2>
             </div>
             <div>
               <p className="font-semibold text-gray-500">Payment Due</p>
-              <h2 className="font-bold text-xl">{detalData.paymentDue}</h2>
+              <h2 className="font-bold text-xl dark:text-white">{detalData.paymentDue}</h2>
             </div>
           </div>
           <div>
             <p className="font-semibold mt-12 items-center text-gray-500">Bill To</p>
-            <h2 className="font-bold text-xl">{detalData.clientName}</h2>
+            <h2 className="font-bold text-xl dark:text-white">{detalData.clientName}</h2>
             <div className="text-gray-400">
               <p>{detalData.clientAddress.street}</p>
               <p>{detalData.clientAddress.city}</p>
@@ -430,23 +432,26 @@ function Detailes() {
 
         <div className="">
           <p className="font-semibold text-gray-500">Sent to</p>
-          <h2 className="font-bold text-xl">{detalData.clientEmail}</h2>
+          <h2 className="font-bold text-xl dark:text-white">{detalData.clientEmail}</h2>
         </div>
         <div className="flex bg-[#F9FAFE] items-center justify-between p-8 rounded-3xl mt-2">
           {detalData.items.map((item, index) => (
             <div key={index}>
               <div className="">
                 <h2 className="font-bold text-xl">{item.name}</h2>
-                <h3 className="text-gray-500 text-xl font-bold">£ {item.price}</h3>
+                <h3 className="text-gray-500 text-xl font-bold">{item.quantity}</h3>
               </div>
-              <div className="font-bold text-xl">£ {item.total}</div>
+              <div className="font-bold text-xl ">£ {item.total}</div>
             </div>
           ))}
         </div>
       </div>
-      <div className="py-8 px-8 bg-[#373B53] rounded-b-xl text-white flex items-center justify-between">
+      <div className="py-12 px-8 bg-[#373B53] dark:bg-black rounded-b-xl text-white flex items-center justify-between">
         <h2 className="font-bold text-xl">Grand Total</h2>
-        <h2 className="font-bold text-3xl">£ {detalData.total}</h2>
+        <h2 className="font-bold text-3xl">£ {detalData.items[0].quantity * detalData.total}</h2>
+        {/* {
+         console.log( detalData.quantity);
+        } */}
       </div>
       <div className="p-4 flex gap-8 md:hidden">
         <button className="py-2 bg-gray-100 text-gray-600 font-bold px-4 rounded-4xl" onClick={() => setEditOpen(true)}>
